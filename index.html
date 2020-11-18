@@ -1,16 +1,53 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
 <head>
     <title>HTML course</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<!-- Internal Styling -->
+<style>
+
+    h1
+    {
+        font-size:50px;
+        color:chartreuse;
+        background-color: grey;
+    }
+
+    body{
+        /* background-color: yellow; */
+    }
+
+    /*style a element with a given id*/
+
+    .coursePage
+    {
+        background-color:black;
+        color:floralwhite;
+    }
+
+     #coursePageId
+    {
+        color:forestgreen;
+    }
+
+    /*style elements with a given class*/
+</style>
+
+<!-- class & id -->
+
+<body >
     <!--  Contents of a Webpage    -->
 
+
+    <!-- inline styling has the highest priority -->
+
+
     <!-- Inline Styling -->
-    <div style="background-color:red;border:3px solid black"   >
+    <div class="coursePage" id="coursePageId"  style="background-color:red;color:white"  >
     <h1 style="font-size:50px" >HTML course</h1>
     <h2>HTML course</h2>
     <h3>HTML course</h3>
@@ -24,7 +61,9 @@
 
     </div>
 
-    <div>
+    <!-- INLINE STYLING -->
+
+    <div  class="coursePage" >
         <h3>Section 2</h3>
 
         <img   border="3px" src="../../activityuser.jpg" alt="Payments flow" >
@@ -32,9 +71,9 @@
     </div>
 
 
-    <div>
+    <div class="coursePage">
         <h3>Section 3: Courses</h3>
-        <ul style="background-color:blue;text-transform:uppercase;border:3px solid green" >
+        <ul >
             <li> <u> HTML </u> </li>
             <li> <strike> JS </strike> </li>
             <li>React</li>
@@ -57,7 +96,7 @@
     Log <sub>10</sub> <sup>e</sup>
 
     <div>
-        <form  enctype="multipart/form-data"  autocomplete="on"  action="someFile.php" > 
+        <form  enctype=""  autocomplete="on"  action="someFile.php" > 
             First Name : <input required type="text" name="first_name" placeholder="utkarsh" />
             <br>
             UserName: <input required type="text" name="UserName" />
@@ -70,7 +109,6 @@
             <textarea rows="6" cols="40" name="description">
                 Enter information about yourself here 
             </textarea>
-
             <br>
             <input  type="checkbox" name="javascript" value="js"  > javascript
             <input type="checkbox" name="nodejs" value="node" > nodejs
@@ -78,9 +116,10 @@
             <input  type="checkbox" name="aws"  value="aws" checked> aws
             <br>
 
-            <input type="radio" name="gender" value="male" >  YOU ARE MALE 
+        
+            <input type="radio" name="gender" value="male" required >  YOU ARE MALE 
             <input type="radio" name="gender" value="female" >  YOU ARE FEMALE
-            
+
             <br>
 
             <select name="dropdown">
