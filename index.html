@@ -5,6 +5,9 @@
 <head>
     <title>HTML course</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">  
 </head>
 <!-- Internal Styling -->
 <style>
@@ -13,6 +16,18 @@
         text-decoration:none;   
     }
 
+    html
+    {
+        font-size:2vw;
+    }
+
+    /*
+
+    em is relative to the font size of its nearest parent 
+    rem is relative to the font size of the html (Root) 
+
+    */
+
     .coursePage
     {
         border:6px solid red; 
@@ -20,50 +35,44 @@
         padding:30px;
         height:auto;
 
-        /* enclosed by a box */
 
-        /* width of the content */
-
-        /* width:500px; */
-
-
-        /*overline, line through , underline*/
-        text-decoration:underline;
-
-        /*uppercase , lowercase and capitalize */
-        text-transform:capitalize;
-
-        text-indent:50px;
-        
-        /* letter-spacing:4px; */
-
-        line-height:1.5;
-        word-spacing:10px;
-        text-shadow:2px 2px orange;
-
+        font-family: 'Dancing Script', cursive;
+         font-style:italic;
+        font-weight:bold;
+        font-size:3em;
+        position:relative;
     }
-    /* actual width =  content width + left padding + right padding + left border + right border + left margin + right margin    
 
-    300+60+12= 372
+    .openInstaClass
+    {
+        
+        position:absolute;
+        left:0px;
+        top:0px;
 
-    */
 
-    /*style elements with a given class*/
+        /*
+        is positioned relative to the nearest positioned ancestor
+        */
+
+
+        /*
+        static
+        relative
+        fixed 
+        */
+    
+    }
+    
+
 </style>
 
 <!-- class & id -->
 <body>
-    <!--  Contents of a Webpage    -->
 
-
-    <!-- inline styling has the highest priority -->
-
-
-    margin -> border-> padding -> content we are seeing 
-
-
-    <!-- Inline Styling -->
-    <div   class="coursePage"   >
+    <div style="        position:relative;border:5px solid black;margin:30px;padding:50px;font-size:10px;" >
+  
+    <div   class="coursePage">
     <h1 style="font-size:50px" >HTML course</h1>
     <h2>HTML course</h2>
     <h3>HTML course</h3>
@@ -73,22 +82,23 @@
 
     <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
 
-    <a href="https://www.instagram.com" >  Open my Insta </a>
+    <a class="openInstaClass" href="https://www.instagram.com" >  Open my Insta </a>
 
     </div>
 
-    <div     >
+    </div>
+
+
+    <div>
         <h1 style="font-size:50px" >HTML course</h1>
         <h2>HTML course</h2>
         <h3>HTML course</h3>
         <h4>HTML course</h4>
         <h5>HTML course</h5>
         <h6 style="color:white" >HTML course</h6>
-    
         <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-    
         <a href="https://www.instagram.com" >  Open my Insta </a>
-        </div>
+     </div>
     
 
     <!-- INLINE STYLING
