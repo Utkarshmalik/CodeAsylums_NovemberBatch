@@ -106,54 +106,16 @@
         border:3px solid pink;
         /* width:600px; */
     }
-
-
-    /* selector1:pseudoClass
-    {
-
-    }
-    */
-
-    a:link
-    {
-        color:red;
-    }
-
-    a:visited
-    {
-        color:green;
-    }
-
-    a:hover
-    {
-        color:yellow;
-    }
-
-    a:active
-    {
-        color:pink;
-    }
-
-    .coursePage:hover
-    {
-        background-color:pink;
-    }
-
-    /*
-    should be applied to the all the p tags
-    who are first child of any elment
-    */
-
-    .coursePage p:first-child
-    {
-        /*
-        i want to select first p element in all coursePage classes
-        */
-
-        color:red;
-    }
     
-    
+    p::after
+    {
+       content:"some content"
+    }
+
+    p::before
+    {
+        content:"some before content "
+    }
 
 
 
