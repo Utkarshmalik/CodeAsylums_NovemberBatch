@@ -109,9 +109,29 @@
 
     /*
 
+    descendeant combinator(space)
 
-
+    selector1 selector2
     */
+     
+    .coursePage ~ p
+    {
+        /* this will selet all p's inside of all div's */
+        color:green;
+    }
+
+    /*
+
+    child selector  (>)
+    */
+
+    /* div > p
+    {
+        background-color:yellow;
+    } */
+
+    
+
 
 
 </style>
@@ -119,7 +139,7 @@
 <!-- class & id -->
 <body>
 
-    <div style=" display:block;position:relative;border:5px solid black;padding:50px;font-size:10px;" >
+    <div class="outerDiv" style="display:block;position:relative;border:5px solid black;padding:50px;font-size:10px;" >
   
     <div   class="coursePage">    
         <a class="openInstaClass" href="https://www.instagram.com" >  Open my Insta </a>
@@ -132,7 +152,15 @@
     <h6 style="color:white" >HTML course</h6>
 
     <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+
     </div>
+
+    <p>I am some Paragraph</p>
+    <p>eveve</p>
 
     </div>
 
