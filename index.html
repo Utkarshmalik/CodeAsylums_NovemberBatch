@@ -41,6 +41,35 @@
         font-weight:bold;
         font-size:3em;
         position:relative;
+
+
+        /* diplay: block, inline, inline-block */
+
+
+        /*
+
+        block elements always start on a new line 
+        stretch to the maximum width availble 
+
+        div
+        h1-h6
+        p
+
+        */
+
+        /*
+
+        inline 
+        they donot start on a new line 
+        only take necesarry width that is there 
+
+        span 
+        a
+        img
+
+        */
+
+
     }
 
     .openInstaClass
@@ -68,15 +97,29 @@
     img
     {
         float: left;;
-        margin:20px;
+        /* margin:20px; */
     }
-    
+
+    h1,h2,h3,h4,h5,h6,p
+    {
+        display:inline-block;
+        border:3px solid pink;
+        /* width:600px; */
+    }
+
+    /*
+
+
+
+    */
+
+
 </style>
 
 <!-- class & id -->
 <body>
 
-    <div style="position:relative;border:5px solid black;margin:30px;padding:50px;font-size:10px;" >
+    <div style=" display:block;position:relative;border:5px solid black;padding:50px;font-size:10px;" >
   
     <div   class="coursePage">    
         <a class="openInstaClass" href="https://www.instagram.com" >  Open my Insta </a>
@@ -89,8 +132,6 @@
     <h6 style="color:white" >HTML course</h6>
 
     <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-
-
     </div>
 
     </div>
@@ -105,7 +146,7 @@
         <h6 style="color:white" >HTML course</h6>
         <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
         <a href="https://www.instagram.com" >  Open my Insta </a>
-     </div>
+     </div> 
     
 
     <!-- INLINE STYLING
