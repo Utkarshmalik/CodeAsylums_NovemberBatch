@@ -12,104 +12,47 @@
 <!-- Internal Styling -->
 <style>
 
-    .outerDiv
+
+    @media only screen and (max-width:600px)
     {
-        /* flex is a type of display property  */
-        /* display:flex; */
-        
-        border:3px solid black;
-        display:flex;
-        height:100vh;
-
-        /*  jc allws to style flex items along the main axis */
-
-        /*
-        flex-start
-        flex-end
-        center
-        space-between 
-        space-around
-        */
-
-    flex-direction:row;
-
-    justify-content:center;
-
-    /*  ai allws to style flex items along the cross axis */
-    align-items: space-between;
-
-
+        html
+        {
+            background-color: blue;
+        }   
     }
 
-    .innerDiv
+    @media  screen and (max-width:900px) and (min-width:600px)
     {
-        border:3px solid red;
-        text-align:center;
-        background-color:pink;    }
-
-    #first
-    {
-        flex:2;
+        html
+        {
+            background-color: pink;
+        }   
     }
-    
-    
-    #second
+
+    @media  screen and (max-width:1200px) and (min-width:900px)
     {
-        flex:1;
+        html
+        {
+            background-color: red;
+        }   
     }
-    
 
-
-    #third
+    @media  screen and (max-width:1500px) and (min-width:1200px)
     {
-        flex:1;
+        html
+        {
+            background-color:orange;
+        }   
     }
-    
 
-
-    #fourth
-    {
-        flex:2;
-    }
-    
 
 </style>
 
 <!-- class & id -->
-<body>
-
-    <div class="outerDiv">
-
-        <div class="innerDiv" id="first" > First Box </div>
-        <div class="innerDiv" id="second" > Second Box </div>
-        <div class="innerDiv" id="third"> Third Box </div>
-        <div class="innerDiv" id="fourth"> Fourth Box </div>
-
-    </div>
+<body style="height:100vh" >
 
 </body>
 
 </html>
 
-<!-- DOM -> Document Object Model  -->
-<!-- 
-DOM is a tree like structure 
-File -> HTML DOM -> Browers actually parse the HTML DOM 
- --> 
 
-
- <!--
-    geolocations
-    HTML media
-    How to css and js in HTML file 
- -->
-
-
-
- <!--
-
-    Flexbox
-    Media queries
-    grid systems
-    bootstrap
- -->
