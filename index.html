@@ -12,240 +12,80 @@
 <!-- Internal Styling -->
 <style>
 
-    a{
-        text-decoration:none;   
-    }
-
-    html
+    .outerDiv
     {
-        font-size:2vw;
-    }
-
-    /*
-
-    em is relative to the font size of its nearest parent 
-    rem is relative to the font size of the html (Root) 
-
-    */
-
-    .coursePage
-    {
-        border:6px solid red; 
-        border-radius:8px;
-        padding:30px;
-        height:auto;
-
-
-        font-family: 'Dancing Script', cursive;
-         font-style:italic;
-        font-weight:bold;
-        font-size:3em;
-        position:relative;
-
-
-        /* diplay: block, inline, inline-block */
-
-
-        /*
-
-        block elements always start on a new line 
-        stretch to the maximum width availble 
-
-        div
-        h1-h6
-        p
-
-        */
-
-        /*
-
-        inline 
-        they donot start on a new line 
-        only take necesarry width that is there 
-
-        span 
-        a
-        img
-
-        */
-
-
-    }
-
-    .openInstaClass
-    {
+        /* flex is a type of display property  */
+        /* display:flex; */
         
-        position:static;
-        top:0px;
-        left:0px;
+        border:3px solid black;
+        display:flex;
+        height:100vh;
+
+        /*  jc allws to style flex items along the main axis */
 
         /*
-
-        toggles between relative and fixed
+        flex-start
+        flex-end
+        center
+        space-between 
+        space-around
         */
 
-        /*
-        static
-        relative
-        fixed 
-        absolute
-        sticky
-        */
-    
+    flex-direction:row;
+
+    justify-content:center;
+
+    /*  ai allws to style flex items along the cross axis */
+    align-items: space-between;
+
+
     }
 
-    img
+    .innerDiv
     {
-        float: left;;
-        /* margin:20px; */
-    }
+        border:3px solid red;
+        text-align:center;
+        background-color:pink;    }
 
-    h1,h2,h3,h4,h5,h6,p
+    #first
     {
-        display:inline-block;
-        border:3px solid pink;
-        /* width:600px; */
+        flex:2;
     }
     
-    p::after
+    
+    #second
     {
-       content:"some content"
+        flex:1;
     }
+    
 
-    p::before
+
+    #third
     {
-        content:"some before content "
+        flex:1;
     }
+    
 
 
+    #fourth
+    {
+        flex:2;
+    }
+    
 
 </style>
 
 <!-- class & id -->
 <body>
 
-    <div class="outerDiv" style="display:block;position:relative;border:5px solid black;padding:50px;font-size:10px;" >
-  
-    <div   class="coursePage"> 
-        <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-   
-        <a class="openInstaClass" href="https://www.instagram.com" >  Open my Insta </a>
-    <h1 style="font-size:50px" >HTML course</h1>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/1200px-Google_Images_2015_logo.svg.png" width="100" height="100" src="" alt="someimage" >
-    <h2>HTML course</h2>
-    <h3>HTML course</h3>
-    <h4>HTML course</h4>
-    <h5>HTML course</h5>
-    <h6 style="color:white" >HTML course</h6>
+    <div class="outerDiv">
 
-    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-    <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
+        <div class="innerDiv" id="first" > First Box </div>
+        <div class="innerDiv" id="second" > Second Box </div>
+        <div class="innerDiv" id="third"> Third Box </div>
+        <div class="innerDiv" id="fourth"> Fourth Box </div>
 
     </div>
-
-    <p>I am some Paragraph</p>
-    <p>eveve</p>
-
-    </div>
-
-
-    <div>
-        <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-        <h1 style="font-size:50px" >HTML course</h1>
-        <h2>HTML course</h2>
-        <h3>HTML course</h3>
-        <h4>HTML course</h4>
-        <h5>HTML course</h5>
-        <h6 style="color:white" >HTML course</h6>
-        <p>  <b> <i> This is a paragraph that i am writing  </i> </b> </p>
-        <a href="https://www.instagram.com" >  Open my Insta </a>
-     </div> 
-    
-
-    <!-- INLINE STYLING
-
-    <div  class="coursePage" >
-        <h3>Section 2</h3>
-
-        <img   border="3px" src="../../activityuser.jpg" alt="Payments flow" >
-
-    </div>
-
-
-    <div class="coursePage">
-        <h3>Section 3: Courses</h3>
-        <ul >
-            <li> <u> HTML </u> </li>
-            <li> <strike> JS </strike> </li>
-            <li>React</li>
-            <li>NodeJS</li>
-            <li>GIT</li>
-            <li>MongoDB</li>
-            
-        </ul>
-    </div>
-
-    <hr>
-
-    <div>
-   3 &lt; 5  
-   3 &gt; 5     
-   3 &amp; 5
-
-   hello &quot; how are you &quot;
-    </div>
-    Log <sub>10</sub> <sup>e</sup>
-
-    <div>
-        <form  enctype=""  autocomplete="on"  action="someFile.php" > 
-            First Name : <input required type="text" name="first_name" placeholder="utkarsh" />
-            <br>
-            UserName: <input required type="text" name="UserName" />
-            <br>
-            Password <input type="password" name="somepassword"/>
-            <br>
-
-            <label>           Tell me about yourself            </label>
-
-            <textarea rows="6" cols="40" name="description">
-                Enter information about yourself here 
-            </textarea>
-            <br>
-            <input  type="checkbox" name="javascript" value="js"  > javascript
-            <input type="checkbox" name="nodejs" value="node" > nodejs
-            <input type="checkbox" name="nodejs value="some> nodejs
-            <input  type="checkbox" name="aws"  value="aws" checked> aws
-            <br>
-
-        
-            <input type="radio" name="gender" value="male" required >  YOU ARE MALE 
-            <input type="radio" name="gender" value="female" >  YOU ARE FEMALE
-
-            <br>
-
-            <select name="dropdown">
-                <option value="mat"> You love maths  </option>
-                <option value="phy"> You love physics  </option>
-                <option value="chem"  > You love chem  </option>
-                <option value="eng"> You love english  </option>
-                <option value="hin" selected > You love hindi  </option>
-        </select>
-
-        <br>
-
-        <input type="file" name="fileupload">
-
-        <input type="button" name="ok" value="OK">
-        <input type="submit" name="ok" value="submit">
-        <input type="reset" name="ok" value="reset">
-
-
-        </form>
-    </div> -->
-
 
 </body>
 
@@ -255,11 +95,21 @@
 <!-- 
 DOM is a tree like structure 
 File -> HTML DOM -> Browers actually parse the HTML DOM 
- --> -->
+ --> 
 
 
  <!--
     geolocations
     HTML media
     How to css and js in HTML file 
+ -->
+
+
+
+ <!--
+
+    Flexbox
+    Media queries
+    grid systems
+    bootstrap
  -->
