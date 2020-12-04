@@ -1,60 +1,41 @@
 
+var name="Utkarsh";
+console.log(name);
+console.log(typeof name);
+
+var x=5;
+var y=5.34;
+
+console.log(typeof y)
+
+var num1=5;
+var num2=5;
+console.log(num1===num2);
 
 
-/*
-what is execution context in JS ? 
-*/
 
-
-/* how is this JS code executed ?  */
-
-// var x=10;
-
-// function parent()
-// {
-//     var y=10;
-
-//     console.log("In parent");
-    
-//     function child() {
-//         console.log("In Child")   
-//     }
-
-//     child();
-// }
-
-// parent();
-
-function fun(params) {
-    var y=15;
-    console.log(x);
-}
-
-console.log(y);
-var x=10;
-
-fun();
-
-
+var lanuages=["c","c++","js"];
 
 /*
-
-Scope of x 
+languages:{0:"c",1:"c++",2:"js"};
 */
 
+console.log(typeof lanuages);
+
+
+var personDetails={firstName:"Utkarsh",lastName:"Malik",age:26,friends:["rahul","rohit"]};
+
+
+//Undefined 
+//NULL
+
+var age;
+console.log(age);
 
 /*
-Execution context:
-
-Global Execution Context
-Functional Execution Context 
-
+numm points to something that doesnot exitsts
 */
 
+var personDetails1={firstName:"Utkarsh",lastName:"Malik",age:26,friends:null};
 
-/*
-
-scope:
-Lexical environment :
-
-*/
+console.log(typeof personDetails1);
