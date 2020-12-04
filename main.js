@@ -1,41 +1,52 @@
-
-var name="Utkarsh";
-console.log(name);
-console.log(typeof name);
-
-var x=5;
-var y=5.34;
-
-console.log(typeof y)
-
-var num1=5;
-var num2=5;
-console.log(num1===num2);
-
-
-
-var lanuages=["c","c++","js"];
-
 /*
-languages:{0:"c",1:"c++",2:"js"};
+functions 
 */
 
-console.log(typeof lanuages);
-
-
-var personDetails={firstName:"Utkarsh",lastName:"Malik",age:26,friends:["rahul","rohit"]};
-
-
-//Undefined 
-//NULL
-
-var age;
-console.log(age);
 
 /*
-numm points to something that doesnot exitsts
+Functions are first class citizens in javascript 
+
+// */
+
+// function  someFun(params) {
+    
+//     console.log("Some Function");
+// }
+
+
+// function parent(someOtherFun) {
+
+//     return function child() {
+
+//         someOtherFun();
+//     }
+// }
+
+// // const anotherFun=parent(someFun);
+// // anotherFun();
+
+
+// parent(someFun)();
+
+
+
+/*
+
+function expressions
 */
 
-var personDetails1={firstName:"Utkarsh",lastName:"Malik",age:26,friends:null};
+// var someFun=function fun() {
+//     console.log("I am a function expression");
+// }
 
-console.log(typeof personDetails1);
+// someFun();
+
+
+//arrow functons 
+
+var fun=()=>
+{
+    console.log("I am a arrow function");
+}
+
+fun();
