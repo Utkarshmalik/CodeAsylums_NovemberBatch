@@ -1,14 +1,10 @@
 
 
-
-for(int i=0;i<1000000000;i++)
-{
-    string s1=3+5*7;
-    print(s1+i);
-}
+function foo() {
+function bar() { return 3; }
+return bar();
+} 
 
 
-//there was a modification in js
+console.log(foo());
 
-
-   byteCode 
