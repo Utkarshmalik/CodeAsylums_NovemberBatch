@@ -1,133 +1,41 @@
-//var vs let vs const 
+// function a(params) {
+  
+//   var b=10;
 
-//ES6
+//   function c(params) {
+//     console.log(b);
+//   }
 
-//only var keyword existed 
-
-//let and const 
-
-
-//scope 
-
-
-// var variables are globally/function scoped
-
-// var var1="hello";
-
-// function fun(params) {
-
-//   var var2="hello again";
+//   return c;
 // }
 
-// console.log(var2);
+// let anotherFun=a();
+// anotherFun();
 
-//var variables can be re declared and updated
+function  grandparent(params) {
 
-// //Re Declaration
-// var myName="Utkarsh";
-// var myName="Rahul";
+  var x=5;
+  
+  function parent(params) {
 
-// //Updation
-// var someName="Utkarsh";
-// someName="Rahul";
+    var y=6;
 
-// //Hoisting
+    function child(params) {
 
+      var z=7;
+      console.log(x+y+z);
+    }
+    
+    return child;
+  }
 
-
-// var person="Utkarsh";
-
-// var age=26;
-
-// if(age > 20)
-// {
-//   var person="Responsible Utkarsh";
-// }
-
-// console.log(person);
-
-
-//let  -> it is obviously preffered for variable declarations 
-
-
-//scope -> block scoped
-
-// {
-//   //BLOCK 
-// }
-// {
-//   //ANOTHER BLOCKS
-// }
-
-
-// var person="Utkarsh";
-
-// let age=26;
-
-// if(age > 20)
-// {
-//   let person="Responsible Utkarsh";
-// }
-
-// console.log(person);
-
-//let and const are not hoisted
-
-//let can be updated but they cannot be re-declared 
-
-
-
-//const 
-
-
-// var x;
-// x=4;
-
-
-// let y;
-// y=4;
-
-
-// const
-
-
-
-
-for(let  i=0;i<5;i++)
-{
-  setTimeout(() => {
-    console.log(i);
-  }, 5000);
-
-  console.log("Hello 1");
+  return parent;
 }
 
-console.log("Hello 2");
-
-// {
-//   0
-// }
-
-// {
-//   1
-// }
-
-// {
-//   2
-// }
-// {
-//   3
-// }
-// {
-//   4
-// }
+ 
+var parent=grandparent();
+var childd=parent();
+childd();
 
 
-
-
-
-
-
-
-
-//0,1,2,3,4
+//CLOSURES
