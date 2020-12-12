@@ -129,23 +129,30 @@
 
 //call 
 
-const obj1={
-  name:"Utkarsh"
+// const obj1={
+//   name:"Utkarsh"
+// }
+
+// const obj2={
+//   name:"Rahul",
+//   attack:function attack(weapon,time) {
+//     console.log(this.name + " is attacking with "+weapon+" at "+time);
+//   }
+// }
+
+// //obj2.attack("gun","night");
+
+// // obj2.attack.apply(obj1,["rifle","mid night"]);
+
+// //bind
+
+// const fun=obj2.attack.bind(obj1,"rifle","midnight");
+
+// fun();
+
+function fun(params) {
+  console.log(this);
 }
 
-const obj2={
-  name:"Rahul",
-  attack:function attack(weapon,time) {
-    console.log(this.name + " is attacking with "+weapon+" at "+time);
-  }
-}
-
-//obj2.attack("gun","night");
-
-// obj2.attack.apply(obj1,["rifle","mid night"]);
-
-//bind
-
-const fun=obj2.attack.bind(obj1,"rifle","midnight");
-
-fun();
+const btn = document.getElementById('btn');
+btn.addEventListener('click',fun);
