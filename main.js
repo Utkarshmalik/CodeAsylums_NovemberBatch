@@ -94,8 +94,55 @@
 
 // for(let i=0;i<arr.length;i++)
 // {
-//   arr1[i]={...arr[i]}
-// }
+// //   arr1[i]={...arr[i]}
+// // }
 
-const arr=[];
-console.log(arr);
+// const arr=[];
+// console.log(arr);
+
+
+//ES6
+
+//destructuring 
+
+// var arr=[{name:"Utkarsh",age:26},{name:"Rahul",age:22},{name:"Shreya",age:30}];
+
+// // const first=arr[0];
+// // const second=arr[1];
+// // const third=arr[2];
+
+// const [first,second,third]=arr;
+
+// const arr=[1,[[2],3]];
+
+// var [foo,[[bar],baz]]=arr;
+
+// console.log(foo);
+// console.log(bar);
+// console.log(baz);
+
+// var arr=[1,2,3,4,6];
+
+// var [first,...remaining]=arr;
+
+// console.log(first);
+// console.log(remaining);
+
+
+// var perA={name:"Utkarsh"};
+// var perB={name:"Rahul"};
+
+// var {name}=perA;
+// console.log(name);
+
+var obj={name:"Utkar",age:"23",height:"300"};
+
+// const name=obj.name;
+// const age=obj.age;
+// const height=obj.height
+
+const {name,age,height}=obj;
+
+console.log(name);
+console.log(age);
+console.log(height);
