@@ -1,78 +1,71 @@
-/*
 
-DOM Manipulation 
-*/
 
-/*
-Selection of elements
+// //innerHTML
+
+// const div=document.getElementById("head");
+
+// // console.log(div.hasAttribute('class'))
+
+// const arr=["HTML","CSS","JS","React","NodeJS"];
+
+// /*
+// createElement()
 // */
 
-// let element=document.getElementById('root');
-// let myPara=document.getElementById('message');
+
+// /*
+// getAttribute,set,has,remove 
+// */
+
+// const list=document.createElement('ul');
 
 
-// myPara.innerHTML="We are learning DOM manipulation";
-
-// console.log(myPara);
-// console.dir(myPara);
-
-// let btn=document.getElementById('ratingSubmitBtn');
-
-// btn.addEventListener("click",()=>
+// arr.forEach((data)=>
 // {
-//     let ratings=document.getElementsByName('ratings');
-//     console.log(ratings);
+//     const li=document.createElement('li');
+//     li.innerHTML=data;
+//     li.setAttribute("class","listItem");
+
+//     setTimeout(() => {
+//         li.removeAttribute('class');
+//     }, 3000);
+
+//     /*
+//     appendChild
+//     */
+//     list.appendChild(li);
+// });
+
+// div.appendChild(list);
+
+// const para=document.createElement('p');
+
+// para.innerHTML='hello how are you';
+
+// div.appendChild(para);
+
+const arr=[1,2,3,4,5,6,7,8];
 
 
-//     for(let i=0;i<ratings.length;i++)
-//     {
-//         let element=ratings[i];
+function reducer(prevValue,num) {
+    return prevValue+num;
 
-//         if(element.checked)
-//         {
-//             alert('You rated '+element.value);
-//         }
-//     }
+}
 
-//     ratings.forEach(
-//         (element)=>{
-//         if(element.checked)
-//         {
-//             alert('You rated '+element.value);
-//         }
-//     }
-//     );
-// })
+const initValue=0;
 
+const ans=arr.reduce(reducer,initValue);
 
-// let menu=document.getElementById('menu');
-// let courses=document.getElementsByClassName('item');
-
-// console.log(courses);
-
-// menu.style.backgroundColor="yellow";
-
-// for(let i=0;i<courses.length;i++)
-//     {
-//         let element=courses[i];
-
-//         console.log(element);
-
-//         element.style.backgroundColor="red";
-//         element.style.margin="10px";
-//     }
+// prevValue,num
+// 0,1
+// 1,2
+// 3,3
+// 6,4
+// 10,5
+// 15,6
+// 21,7
+// 28,8
+// 36
 
 
-
-// let btn=document.getElementById('checkcount');
-
-// btn.addEventListener('click',()=>
-// {
-//      let headings=document.getElementsByTagName('h2');
-//      alert(headings.length);
-// })
-
-let elements=document.querySelectorAll('p');
-
-
-console.log(elements);
+console.log(ans);
