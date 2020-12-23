@@ -1,42 +1,57 @@
 
-const addButton=document.getElementById("addButton");
 
-addButton.addEventListener("click",()=>
+
+
+// function Book(title,author,year) {
+
+//     this.title=title;
+//     this.author=author;
+//     this.year=year;
+
+// }
+
+// const book1 = new Book("JS","Rahul",2018);
+// const book2=new Book("React","utkarsh",2012);
+
+// console.log(book1 instanceof Book);
+
+// const Book={
+//     summary:function () {
+//         console.log(`${this.title} is written by ${this.author}`);
+//     }
+// }
+
+
+// const book1=Object.create(Book);
+// book1.title="JS";
+// book1.author="Utkarsh";
+
+// // console.log(book1);
+
+
+let Book=function(name) {
+    this.name=name
+}
+
+let newBook=function(name) {
+    Book.call(this,name);
+}
+
+                     
+                      
+
+ newBook.prototype.summary=()=>
 {
-    var li=document.createElement("li");
+    console.log("vfvf");
+}
 
-    var inputFieldValue=document.getElementById("inputField").value;
+
+const book1=new newBook("dc");
+const book2=new newBook("JS");
+
+console.log(book1);
+console.log(book2);
 
 
-    if(inputFieldValue!=="")
-    {
-    var textNode=document.createTextNode(inputFieldValue);
-    li.appendChild(textNode);
-    li.style.margin="5px";
-    var span=document.createElement('SPAN');
-    span.setAttribute("class","deleteButton");
-    var txtNode=document.createTextNode('X');
-    span.appendChild(txtNode);
-    span.style.float="right";
-    li.appendChild(span);
-    document.getElementById('taskList').appendChild(li);   
-    } 
-    document.getElementById("inputField").value="";
 
-    li.onclick=(event)=>
-    {
-        li.setAttribute("class","checked");
-    }
 
-    span.onclick=(event)=>
-    {
-        event.stopPropagation();
-        li.style.display="none";
-    }
-
-})
-
-document.getElementById("clearButton").addEventListener("click",()=>
-{
-    document.getElementById("taskList").innerHTML="";
-})
