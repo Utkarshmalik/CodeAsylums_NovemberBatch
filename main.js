@@ -1,57 +1,14 @@
-
-
-
-
-// function Book(title,author,year) {
-
-//     this.title=title;
-//     this.author=author;
-//     this.year=year;
-
-// }
-
-// const book1 = new Book("JS","Rahul",2018);
-// const book2=new Book("React","utkarsh",2012);
-
-// console.log(book1 instanceof Book);
-
-// const Book={
-//     summary:function () {
-//         console.log(`${this.title} is written by ${this.author}`);
-//     }
-// }
-
-
-// const book1=Object.create(Book);
-// book1.title="JS";
-// book1.author="Utkarsh";
-
-// // console.log(book1);
-
-
-let Book=function(name) {
-    this.name=name
-}
-
-let newBook=function(name) {
-    Book.call(this,name);
-}
-
-                     
-                      
-
- newBook.prototype.summary=()=>
-{
-    console.log("vfvf");
+const obj={
+    name:"Utkarsh"
 }
 
 
-const book1=new newBook("dc");
-const book2=new newBook("JS");
+function run() {
+    console.log(this.name + " is running");
+}
 
-console.log(book1);
-console.log(book2);
+console.dir(run);
 
+console.log(run.toString());
 
-
-
+//run.call(obj);
