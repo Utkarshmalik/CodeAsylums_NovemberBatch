@@ -1,77 +1,43 @@
-// // const obj={
-// //     name:"Utkarsh"
-// // }
+// console.log(1);
+
+// //200 ms to execute 
+//  const data=5//fetch data from database//fetch a data from a database
+
+//  const finalData=data+5*7-9+5;
+    
+// // using that data to do some thing
 
 
-// // function run() {
-// //     console.log(this.name + " is running");
-// // }
-
-// // console.dir(run);
-
-// // console.log(run.toString());
-
-// // //run.call(obj);
+//callbacks : A function that will execute at some later point of time
 
 
-// /*
+// const fetchDataFromDB=(callBack)=>
+// {
+//     console.log("I am a expensive function");
 
-// */
+//     setTimeout(()=>
+//     {
+//         console.log("expensive task done");
+//         callBack();
+                    
+//     }, 2000);
+// }
 
-// //child's __proto__ always points to the prottype property of its parent
+// const dataRecievedFromDB=()=>
+// {
+//     console.log("Callback functiion called");
+// }
 
-// let f = function () {
-//     this.a = 1;
-//     this.b = 2;
-//  }
-
-//  f.prototype.c=4;
-//  f.prototype.d=5;
-
-//  let o = new f(); 
-//  let m=new f();
-//  let n=new f();
-
-
-
-//  console.log(o.__proto__===f.prototype);
-
-
-//  console.log(o);
-//  console.log(m); 
-//  console.log(n);
+// fetchDataFromDB(dataRecievedFromDB);
 
 
 
-// var o = {
-//     a: 2,
-//     m: function() {
-//       return this.a + 1;
-//     }
-//   };
-  
-//   console.log(o.m()); 
-  
-//   var p = Object.create(o);
-//  console.log(p); 
-//   p.a = 4; 
-//   console.log(p.m())
+setTimeout(() => {
+    console.log(1);
+}, 0);
 
-//   function doSomething(){
-//   }
-
-// console.log( doSomething.prototype );
-
-// // var doSomething = function(){};
-// console.log( doSomething.prototype );
+console.log(2);
 
 
-function doSomething(){}
+console.log(3);
 
-doSomething.prototype.foo = "bar"; 
-
-var doSomeInstancing = new doSomething();
-
-doSomeInstancing.prop = "some value"; 
-
-console.log( doSomeInstancing );
