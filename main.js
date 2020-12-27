@@ -1,50 +1,27 @@
 
 
-// const div1=document.getElementById("div1");
-// const div2=document.getElementById("div2");
-// const div3=document.getElementById("div3");
+const btn=document.getElementById("btn");
 
+// request should be made only once in 2 sec 
 
-// div1.addEventListener("click",(e)=>
-// {
-//     console.log("div 1 clicked");
-//     console.log(e);
+var timer=undefined;
 
-// });
+btn .addEventListener("click",()=>{
 
-// div2.addEventListener("click",(e)=>
-// {
-//     console.log("div 2 clicked");
-//     console.log(e);
-
-// });
-
-// div3.addEventListener("click",(e)=>
-// {
-//     console.log("div 3 clicked");
-//     console.log(e);
-
-// });
-
-
-const menu=document.getElementById("menu");
-
-menu.addEventListener("click",(event)=>
-{
-    let target=event.target;
-
-    switch (target.id) {
-        case 'home':
-            console.log("You are on the homepage");
-            break;
-        case 'about':
-            console.log("You are on the about page");
-            break;
-        case 'reports':
-            console.log("You are on the Report Page");
-            break;
-        default:
-            break;
+    if(timer)
+    {
+        return;
     }
 
+
+    fetch("https://dummyapi.io/data/api/user",{
+        headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}
+    }).then(data=>console.log(data));
+
+    timer=setTimeout(() => {
+        timer=undefined;
+    }, 3000);
+    
 })
+
+
