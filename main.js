@@ -83,35 +83,119 @@
 
 //promise chaining
 
+
+
+// fetch("https://dummyapi.io/data/api/user",{
+//     headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}
+// }).then(res=>res.json())
+// .then(data=>
+//     {
+//         console.log(data);
+//         data.data.forEach(person => {
+
+//             console.log(person);
+
+//             const newElement=document.createElement('div');
+
+//             const img=document.createElement('img');
+//             img.setAttribute('src',person.picture);
+
+//             const h1=document.createElement('h1');
+//             h1.innerHTML=`${person.firstName} ${person.lastName}`;
+
+//             newElement.style.border="3px solid red";
+//             newElement.appendChild(h1);
+//             newElement.appendChild(img);
+
+//             div.appendChild(newElement);
+//         });
+
+//     })
+// .catch(err=>console.log(err.message));
+
+// const promise1 = fetch("https://dummyapi.io/data/api/user",{headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}})
+// const promise2 = 42;
+// const promise3 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'foo');
+// });
+
+// Promise.all([promise1, promise2, promise3]).then((values) => {
+
+//     values.forEach(element => {
+//         console.log(element);
+//     });
+// });
+
+//Promise.all
+
+
+//Promise.race 
+
+
+// const promise1 = fetch("https://dummyapi.io/data/api/user",{headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}})
+// const promise2 = 42;
+// const promise3 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'foo');
+// });
+
+// Promise.race([promise1, promise2, promise3]).then((value) => {
+//     console.log(value);
+// });
+
+//async 
+
+
+// async function f(params) {
+//     return Promise.resolve(1); 
+// }
+
+
+// async function f(params) {
+    
+//     let promise=new Promise((resolve,reject)=>
+//     {
+//         setTimeout(() => {
+//             resolve("done");
+//         }, 1000);
+//     })
+
+//     let result=await promise;
+
+//     alert(result);
+// }
+
+// f()
+
+
+
+
 const div=document.getElementById('head');
 
 
-fetch("https://dummyapi.io/data/api/user",{
-    headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}
-}).then(res=>res.json())
-.then(data=>
-    {
-        console.log(data);
-        data.data.forEach(person => {
+async function showUsers()
+{
+    const data=await (await fetch("https://dummyapi.io/data/api/user",{headers:{"app-id":"5fca5a3236a334a6a8f40cc7"}})).json();
+    data.data.forEach(person => {
 
-            console.log(person);
-
-            const newElement=document.createElement('div');
-
-            const img=document.createElement('img');
-            img.setAttribute('src',person.picture);
-
-            const h1=document.createElement('h1');
-            h1.innerHTML=`${person.firstName} ${person.lastName}`;
-
-            newElement.style.border="3px solid red";
-            newElement.appendChild(h1);
-            newElement.appendChild(img);
-
-            div.appendChild(newElement);
-        });
-
+                    console.log(person);
+        
+                    const newElement=document.createElement('div');
+        
+                    const img=document.createElement('img');
+                    img.setAttribute('src',person.picture);
+        
+                    const h1=document.createElement('h1');
+                    h1.innerHTML=`${person.firstName} ${person.lastName}`;
+        
+                    newElement.style.border="3px solid red";
+                    newElement.appendChild(h1);
+                    newElement.appendChild(img);
+        
+                    div.appendChild(newElement);
     })
-.catch(err=>console.log(err.message));
+
+}
+
+showUsers();
 
 
